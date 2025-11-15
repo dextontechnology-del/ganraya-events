@@ -1,25 +1,43 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import Navbar from './components/Navbar/Navbar';
+import Hero from './components/Hero/Hero';
+import Plans from './components/Plans/Plans';
+import Projects from './components/Projects/Projects';
+import Contact from './components/Contact/Contact';
+import GetInTouch from './components/GetInTouch/GetInTouch';
+import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs';
+import Footer from './components/Footer/Footer';
 import './App.css';
+import WhatsAppButton from './components/WhatsAppButton/WhatsAppButton';
+
+const Home = () => (
+  <>
+    <Hero />
+    <WhyChooseUs />
+    <Projects />
+    <GetInTouch />
+    <WhatsAppButton />
+  </>
+);
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <AnimatePresence mode="wait">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/plans" element={<Plans />} />
+            <Route path="/projects" element={<Projects />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
