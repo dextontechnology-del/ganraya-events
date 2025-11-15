@@ -67,7 +67,7 @@ const Footer = () => {
       <div className="footer-bottom">
         <div className="container">
           <div className="footer-bottom-content">
-            <p>&copy; {currentYear} GANRAYA EVENTS. All Rights Reserved.</p>
+            <p>&copy; {currentYear} DEXTON TECHNOLOGY. All Rights Reserved.</p>
             <div className="footer-links">
               <Link to="/privacy-policy">Privacy Policy</Link>
               <Link to="/terms">Terms of Service</Link>

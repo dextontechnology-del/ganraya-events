@@ -32,9 +32,9 @@
 }
 
 .logo-image {
-  height: 100px;
+  height: 60px;
   width: auto;
-  max-width: 150px;
+  max-width: 100px;
   object-fit: contain;
   margin-right: 10px;
 }
@@ -83,6 +83,20 @@
     padding: 0 20px;
   }
 
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+
+  .logo-image {
+    height: 50px;
+    max-width: 80px;
+    margin-right: 8px;
+  }
+
+  .logo-text {
+    font-size: 0.9rem;
+  }
+
   .nav-menu {
     display: flex;
     flex-direction: column;
@@ -128,5 +142,26 @@
     transform: translate(-100%, 60%);
     font-size: 1.8rem;
     cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar-container {
+    padding: 0 15px;
+  }
+
+  .logo-image {
+    height: 40px;
+    max-width: 60px;
+    margin-right: 5px;
+  }
+
+  .logo-text {
+    font-size: 0.8rem;
+  }
+
+  .menu-icon {
+    transform: translate(-80%, 60%);
+    font-size: 1.5rem;
   }
 }
